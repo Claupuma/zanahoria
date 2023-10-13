@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/zanahoria/static/css/main.073c9b0a.css",
-    "main.js": "/zanahoria/static/js/main.1938f2f4.js",
+    "main.js": "/zanahoria/static/js/main.2ac0ad71.js",
     "static/js/787.cc4e593a.chunk.js": "/zanahoria/static/js/787.cc4e593a.chunk.js",
     "static/media/logo.svg": "/zanahoria/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/zanahoria/index.html",
     "main.073c9b0a.css.map": "/zanahoria/static/css/main.073c9b0a.css.map",
-    "main.1938f2f4.js.map": "/zanahoria/static/js/main.1938f2f4.js.map",
+    "main.2ac0ad71.js.map": "/zanahoria/static/js/main.2ac0ad71.js.map",
     "787.cc4e593a.chunk.js.map": "/zanahoria/static/js/787.cc4e593a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.1938f2f4.js"
+    "static/js/main.2ac0ad71.js"
   ]
 }
