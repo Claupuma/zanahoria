@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/zanahoria/static/css/main.7c1c4a72.css",
-    "main.js": "/zanahoria/static/js/main.a899025a.js",
+    "main.css": "/zanahoria/static/css/main.3b5045f0.css",
+    "main.js": "/zanahoria/static/js/main.5c8c9045.js",
     "static/js/787.cc4e593a.chunk.js": "/zanahoria/static/js/787.cc4e593a.chunk.js",
     "static/media/logo.svg": "/zanahoria/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/zanahoria/index.html",
-    "main.7c1c4a72.css.map": "/zanahoria/static/css/main.7c1c4a72.css.map",
-    "main.a899025a.js.map": "/zanahoria/static/js/main.a899025a.js.map",
+    "main.3b5045f0.css.map": "/zanahoria/static/css/main.3b5045f0.css.map",
+    "main.5c8c9045.js.map": "/zanahoria/static/js/main.5c8c9045.js.map",
     "787.cc4e593a.chunk.js.map": "/zanahoria/static/js/787.cc4e593a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c1c4a72.css",
-    "static/js/main.a899025a.js"
+    "static/css/main.3b5045f0.css",
+    "static/js/main.5c8c9045.js"
   ]
 }
