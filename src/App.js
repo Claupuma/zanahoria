@@ -1,21 +1,27 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import logo from './logo.svg';
-import './App.css';
-import Vari from './componentes/Appform';
-
+//import './App.css';
+import { useEffect, useState } from 'react';
+import Dashboard from './public/Dashboard';
+import Home from './public/Home';
+import PublicRutas from './ruteo/PublicRutas';
 
 
 function App() {
-  return (
-    <div 
-      style ={{background:"yellow",
-      width:"350px", 
-      padding:"10px"}}>
-        <Vari/>
-        <i class="large material-icons">insert_chart</i>
-        
- 
-    </div>
-  );
-}
 
-export default App;
+  
+    return (
+      <div style={{background:"plum"}}>
+      <Router>
+        <Routes>
+          <PublicRutas/>
+
+        </Routes>
+
+      </Router>
+      </div>
+    );
+  }
+  
+  
+  export default App;
