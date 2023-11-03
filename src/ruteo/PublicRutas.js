@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route, Link, Outlet, Switch, Redirect} from 'react-router-dom';
 
-import { useAuth } from './AuthContext';
+//import { useAuth } from './AuthContext';
 import { getAuth, signOut } from 'firebase/auth';
 import "./BarraNavegacion.css";
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,7 @@ import Home from '../public/Home';
 import Dashboard from '../public/Dashboard';
 
 const PublicRutas = () => {
-  const { user } = useAuth();
+  //const { user } = useAuth();
   const auth = getAuth();
   const navigate = useNavigate();
 

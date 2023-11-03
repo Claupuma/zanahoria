@@ -1,27 +1,20 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import logo from './logo.svg';
-//import './App.css';
 import { useEffect, useState } from 'react';
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Dashboard from './public/Dashboard';
 import Home from './public/Home';
 import PublicRutas from './ruteo/PublicRutas';
-
+import { useAuth } from './ruteo/AuthContext';
+import ProtectedRutas from './ruteo/ProtectedRutas';
 
 function App() {
-
-  
-    return (
-      <div style={{background:"plum"}}>
+  const { user } = useAuth();
+  return (
+    <div style={{background:"plum"}}>
       <Router>
-        <Routes>
-          <PublicRutas/>
-
-        </Routes>
-
+        { user ? <ProtectedRutas /> : <PublicRutas />}
       </Router>
-      </div>
-    );
-  }
-  
-  
-  export default App;
+    </div>
+  );
+}
+
+export default App;
