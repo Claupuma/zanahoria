@@ -62,7 +62,7 @@ const AuthProvider = ({ children }) => {
     }
   };
 
-  const registerUser = async (email, password) => {
+  const registerUser = async (email, password) => { //Verificar si correo ya esta registrado
     try {
       // Verificar si el correo electrónico ya está en uso
       const docRef = doc(db, 'users', email); // Suponiendo que 'users' es una colección de usuarios
@@ -86,8 +86,6 @@ const AuthProvider = ({ children }) => {
     }
   }
 
-  //async function registerUser(email, password) { }
-
   // (6) Proporcionar contexto
   return (
     <AuthContext.Provider value={{ user, signIn, signOut, register, registerUser }}>
@@ -96,8 +94,9 @@ const AuthProvider = ({ children }) => {
   );
 };
 
+// (7) Para consumir el contexto en otros componentes
 const useAuth = () => {
-  return useContext(AuthContext);
+  return useContext(AuthContext);   
 };
 
 export { AuthProvider, useAuth };
