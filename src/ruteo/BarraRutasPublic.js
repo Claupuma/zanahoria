@@ -3,18 +3,20 @@ import { Routes, Route, Link, Outlet, Switch, Redirect} from 'react-router-dom';
 
 import { useAuth } from './AuthContext';
 import { getAuth, signOut } from 'firebase/auth';
-//import "./BarraNavegacion.css";
+import "./BarraNavegacion.css";
 import { useNavigate } from 'react-router-dom';
 
 import Home from '../public/Home';
 import Dashboard from '../public/Dashboard';
 import LoginForm from '../login/LoginForm';
+import Contacto from '../public/Contacto';
+import RegisterForm from '../login/RegisterForm';
 
 const BarraRutasPublic = () => {
     const { user } = useAuth();
     const auth = getAuth();
     const navigate = useNavigate();
-  
+
     const handleSignOut = () => {
       if (user) {
         signOut(auth)
@@ -27,6 +29,8 @@ const BarraRutasPublic = () => {
           });
       }
     }
+
+    
   
     return (
       <div style={{ background:"greenyellow", }}>
@@ -45,17 +49,19 @@ const BarraRutasPublic = () => {
             <ul>
               <li><Link to="/">Portada(Dashboard)</Link> </li>
               <li><Link to="/home">Inicio(Home)</Link> </li>
-              <li><Link to="/home">Inicio(Home)</Link> </li>
-              <li><Link to="/home">Inicio(Home)</Link> </li>
+              <li><Link to="/AcercaDe">Informacion(Information)</Link> </li>
+              <li><Link to="/Contacto">Noticias(Home)</Link> </li>
             </ul>
           </div>
         </nav>
   
         <Routes>
+          <Route path="/nuevoregistro" element={<RegisterForm />} />
+          <Route path="/iniciarsesion" element={<LoginForm/>} />
+
           <Route path="/" element={<Dashboard />} />
-          <Route path="/iniciarsesion" element={<LoginForm />} />
-        
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/contacto" element={<Contacto/>} />
+          
           <Route path="/home" element={<Home />} />
         </Routes> 
       </div>

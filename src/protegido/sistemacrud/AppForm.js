@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { addDoc, collection, doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../conexion/firebase";
-
+import { ToastContainer, toast} from 'react-toastify'
 const AppForm = (props) => {
  
   ////////////////// MANEJAR INGRESO DE DATOS ///////////
@@ -22,6 +22,7 @@ const AppForm = (props) => {
         if(validarForm()){                            // Validación de form
           addDoc(collection(db, 'persona'), objeto);  // Guardar en BD
           alert("Se registro con éxito...");
+          toast("Doc. se guardo con exito",{type:"error",autoClose:2000})
         }else{
           console.log("NO se guardo...");
         }
@@ -30,6 +31,7 @@ const AppForm = (props) => {
         await updateDoc(doc(collection(db, "persona"), props.idActual), objeto);
         props.setIdActual("");                        // Borrar id
         alert("Se ACTUALIZO el REGISTRO...");
+        toast("Doc. se actualizo con exito",{type:"error",autoClose:2000})
       }
     } catch (error) {
       console.log("Error en Crear o actualizar", error);
