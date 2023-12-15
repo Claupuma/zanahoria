@@ -19,7 +19,7 @@ const PublicRutas = () => {
   }
 
   return (
-    <div style={{ background:"greenyellow", }}>
+    <div style={{ background:"plum", }}>
       <nav>
         <div id="login">
           <ul>

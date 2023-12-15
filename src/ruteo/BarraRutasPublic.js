@@ -33,7 +33,7 @@ const BarraRutasPublic = () => {
     
   
     return (
-      <div style={{ background:"greenyellow", }}>
+      <div style={{ background:"Green", }}>
         <nav>
           <div id="login">
             <ul>
@@ -47,10 +47,10 @@ const BarraRutasPublic = () => {
           
           <div id="menu">
             <ul>
-              <li><Link to="/">Portada(Dashboard)</Link> </li>
-              <li><Link to="/home">Inicio(Home)</Link> </li>
-              <li><Link to="/AcercaDe">Informacion(Information)</Link> </li>
-              <li><Link to="/Contacto">Noticias(Home)</Link> </li>
+              <li><Link to="/">Portada</Link> </li>
+              <li><Link to="/home">Inicio</Link> </li>
+              <li><Link to="/AcercaDe">Informacion</Link> </li>
+              <li><Link to="/Contacto">Noticias</Link> </li>
             </ul>
           </div>
         </nav>

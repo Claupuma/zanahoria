@@ -11,7 +11,7 @@ import BarraRutasPublic from './ruteo/BarraRutasPublic';
 function App() {
   const { user } = useAuth();
   return(
-    <div style={{background:"plum"}}>
+    <div style={{background:"Blue"}}>
       <Router>
         {user ? <BarraRutasProtected /> : <BarraRutasPublic/>}
       </Router>

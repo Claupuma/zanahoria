@@ -2,17 +2,17 @@ nav ul {display: inline; list-style: none; }
 nav li {padding-right: 10px;}
 #login, #menu {padding: 10px;}
 
-#login{ background: lightgrey; }
+#login{ background: rgb(37, 182, 139)}
 #login ul li{float: inline-end;}
 
-#menu{background: silver}
+#menu{background: rgb(212, 151, 151)}
 #menu ul li{float: inline-start;}
 
-#sis {background: yellowgreen;}
+#sis {background: rgb(50, 169, 205);}
 
 #file {background: coral}  /* mediumorchid; darkgreen*/
 
-#public { background:  slateblue; }
+#public { background:  rgb(90, 182, 2057, 168); }
 
 @media (max-width: 600px){
   #login, #menu{display: grid; }
