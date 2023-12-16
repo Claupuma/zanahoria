@@ -3,20 +3,22 @@ import { Routes, Route, Link, Outlet, Switch, Redirect} from 'react-router-dom';
 
 import { useAuth } from './AuthContext';
 import { getAuth, signOut } from 'firebase/auth';
-import "./BarraNavegacion.css";
+//import "./BarraNavegacion.css";
 import { useNavigate } from 'react-router-dom';
 
 import Home from '../public/Home';
 import Dashboard from '../public/Dashboard';
-import LoginForm from '../login/LoginForm';
 import Contacto from '../public/Contacto';
+import AcercaDe from '../public/AcercaDe';
+import LoginForm from '../login/LoginForm';
+
 import RegisterForm from '../login/RegisterForm';
 
 const BarraRutasPublic = () => {
     const { user } = useAuth();
     const auth = getAuth();
     const navigate = useNavigate();
-
+  
     const handleSignOut = () => {
       if (user) {
         signOut(auth)
@@ -29,11 +31,9 @@ const BarraRutasPublic = () => {
           });
       }
     }
-
-    
   
     return (
-      <div style={{ background:"Green", }}>
+      <div style={{ background:"greenyellow", }}>
         <nav>
           <div id="login">
             <ul>
@@ -47,22 +47,23 @@ const BarraRutasPublic = () => {
           
           <div id="menu">
             <ul>
-              <li><Link to="/">Portada</Link> </li>
-              <li><Link to="/home">Inicio</Link> </li>
-              <li><Link to="/AcercaDe">Informacion</Link> </li>
-              <li><Link to="/Contacto">Noticias</Link> </li>
+              <li><Link to="/home">Inicio(Home)</Link> </li>
+              <li><Link to="/contacto">Informacion</Link> </li>
+              <li><Link to="/acercade">Noticias</Link> </li>
+              <li><Link to="/contacto">Contacto</Link> </li>
             </ul>
           </div>
         </nav>
   
         <Routes>
-          <Route path="/nuevoregistro" element={<RegisterForm />} />
-          <Route path="/iniciarsesion" element={<LoginForm/>} />
-
           <Route path="/" element={<Dashboard />} />
-          <Route path="/contacto" element={<Contacto/>} />
-          
+          <Route path="/iniciarsesion" element={<LoginForm />} />
+          <Route path="/nuevoregistro" element={<RegisterForm />} />
+        
+          <Route path="/" element={<Dashboard />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/acercade" element={<AcercaDe />} />
         </Routes> 
       </div>
     )

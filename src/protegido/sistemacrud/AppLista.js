@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import AppForm from './AppForm';
 import { collection, deleteDoc, doc, onSnapshot, query } from 'firebase/firestore';
-import { db } from '../../conexion/firebase'; 
 import "react-toastify/dist/ReactToastify.css"
-import { ToastContainer, toast} from 'react-toastify'
+import { db } from '../../conexion/firebase';
+import { ToastContainer, toast } from 'react-toastify';
+
+ 
 const AppLista = (props) => {
 
   ////// Lectura fnRead ///////////
@@ -15,8 +17,7 @@ const AppLista = (props) => {
       xDatosBD.forEach((doc) => {                 // Recorriendo datos fon bucle
         xDoc.push({id:doc.id, ...doc.data()});    // Juntando id y coleccion
       });
-      setDocBD(xDoc);  
-      toast("Doc. se guardo con exito",{type:"error",autoClose:2000})                           // Pasando datos a "docBD"
+      setDocBD(xDoc);                           // Pasando datos a "docBD"
     });
   }
   //fnRead();                                     // Prueba sin useEffect
@@ -30,15 +31,14 @@ const AppLista = (props) => {
       await deleteDoc(doc(db, "persona", xId));   // Elimina en BD
     }
     toast("Doc. eliminado con exito",{type:"error",autoClose:2000})
-    /////alert("Se ELIMINO con éxito...");
+    //////lert("Se ELIMINO con éxito...");
   }
   
   return (
     <div style={{background:"greenyellow", padding:"10px"}}>
       <h1>AppList.js</h1>
       <ToastContainer/>
-
-
+      
       <AppForm {...{idActual, setIdActual}} />  {/* Envios de variables */}
       <h3>Lista de clientes</h3>
       {

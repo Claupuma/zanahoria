@@ -19,6 +19,9 @@ import Fotos from '../protegido/sistemafile/Fotos';
 import RegisterForm from '../login/RegisterForm';
 import LoginForm from '../login/LoginForm';
 import AppLista from '../protegido/sistemacrud/AppLista';
+import Listadeprofesores from '../protegido/sistemacrud/ListaDeProfesores';
+import ListaDeCarreras from '../protegido/sistemacrud/ListaDeCarreras';
+import ListaDeCursos from '../protegido/sistemacrud/ListaDeCursos';
 
 const BarraRutasProtected = () => {
     const { user } = useAuth();
@@ -52,9 +55,15 @@ const BarraRutasProtected = () => {
               
           <div id="menu">
             <ul>
+              <li><Link to="/sistema-crud/listadecarreras">Carreras</Link> </li>
+              <li><Link to="/sistema-crud/listadecursos">Deportes</Link> </li>
+              <li><Link to="/sistema-crud/listadeprofesores">Egresados</Link> </li>
               <li><Link to="/sistema-crud/applista">Alumnos(AppLista)</Link> </li>
-                      
+              <li><Link to="/sistema-crud/applista">Videos</Link> </li>
               <li><Link to="/sistema-file/fotos">Fotos</Link> </li>
+              <li><Link to="/sistema-crud/applista">PDF</Link> </li>
+              <li><Link to="/sistema-crud/applista">Word</Link> </li>
+              
             </ul>
           </div>
         </nav>
@@ -68,12 +77,16 @@ const BarraRutasProtected = () => {
           <Route path="/sistema-crud" element={<MarcoParaSistemaCRUD />}>
             <Route index element={<SistemaCRUD />} />
             <Route path="applista" element={<AppLista/>} />
+            <Route path="listadeprofesores" element={<Listadeprofesores />}/>
+            <Route path="listadecarreras" element={<ListaDeCarreras />}/>
+            <Route path="listadecursos" element={<ListaDeCursos />}/>
           </Route>
   
   
           <Route path="/sistema-file" element={<MarcoParaSistemaFILE />}>
             <Route index element={<SistemaFILE />} />
             <Route path="fotos" element={<Fotos />} />
+            
           </Route>
   
         </Routes>        

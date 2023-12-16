@@ -5,12 +5,11 @@ const ListaDeCarreras = () => {
     <div id="sis">
       <h1>ListaDeCarreras</h1>
       Lista de carreras...
-      <p>Computaciòn e Informatica</p>
-      <p>Metalurgia</p>
-      <p>Administraciòn de Redes</p>
-      <p>Enfermeria</p>
+      <p>Computacion e informatica</p>
+      <p>Contabilidad</p>
+      <p>Administracion</p>
       <p>Maquinaria Pesada</p>
-      <p>Psicologia</p>
+      <p>Administracion de Sistemas</p>
     </div>
   )
 }
